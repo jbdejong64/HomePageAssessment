@@ -1,0 +1,39 @@
+a {
+    color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.home-page-header {
+    background-color: #D9E2EC;
+}
+
+.home-page-header-icon-label {
+ padding-left: 10px;
+}
+
+.account-menu-header {
+    border-bottom: #D9E2EC solid 1px;
+}
+
+.account-name {
+    font-weight: bold;
+}
+
+.account-email {
+    font-weight: lighter;
+}
+
+.logout-btn-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-btn {
+    width: 90%;
+}

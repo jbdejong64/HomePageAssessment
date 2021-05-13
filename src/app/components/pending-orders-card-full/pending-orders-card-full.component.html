@@ -1,0 +1,10 @@
+<div class="card pending-orders-full">
+    <div class="pending-orders-full-body ">
+      <span class="pending-orders-header-label">Pending Orders</span>
+    </div>
+    <ul class="pending-orders-full-list">
+        <li *ngFor="let item of pendingOrderItems">
+            <app-pending-orders-items [pendingOrder]="item"></app-pending-orders-items>
+        </li>
+    </ul>
+</div>

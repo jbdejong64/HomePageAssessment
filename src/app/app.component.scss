@@ -1,0 +1,108 @@
+html,
+body {
+    height: 100vh;
+    background-color: #D9E2EC;
+}
+
+.main-content {
+    height: 90%;
+}
+
+.main-content-non-sidenav {
+    overflow-x: hidden;
+    background-color: #D9E2EC;
+    position: relative; 
+    height: 100%;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+.main-content-sidenav {
+    height:100%;
+    width:10vw;
+    background-color: #D9E2EC;
+}
+
+.main-content-sidenav-inner {
+    position: relative; 
+    height: 100%;
+}
+
+.sidenav-toggle-outer {
+    display:inline-block;
+    vertical-align:baseline;
+}
+
+.sidenav-icon {
+    font-size: 30px;
+}
+
+.double-chevron {
+    transform: rotate(0deg);
+    transition: transform 1s linear;
+}
+
+.rotated-double-chevron {
+    transform: rotate(180deg);
+    transition: transform 1s linear;
+}
+
+.mat-drawer-side {
+    border-right: none;
+}
+
+.selected-sidenav-padding {
+    padding-left: 10px;
+}
+
+.selected-sidenav-button {
+    border-radius: 25px;
+    background: #BCCCDC;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sidenav-button-vertical-padding {
+    padding-bottom: 15px;
+}
+
+.sidenav-padding {
+    padding-left: 15px;
+}
+
+.sidenav-bottom {
+    position: absolute;
+    bottom: 10px;
+}
+
+.main-bottom {
+    min-width: unset !important;
+    position: absolute;
+    bottom: 15px;
+}
+
+$toast-width: 500px;
+
+::ng-deep .toast-bottom-center {
+    bottom: 12px;
+    left: calc(50% - #{$toast-width / 2});
+}
+
+::ng-deep .toast-container.toast-bottom-center .ngx-toastr {
+    width: $toast-width;
+}
+
+::ng-deep .ngx-toastr {
+    background-color: #CFBCF2;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-color: #240754
+}
+
+::ng-deep .toast-title {
+    color:#240754;
+}
+
+::ng-deep .toast-message {
+    color:#240754;
+}

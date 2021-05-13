@@ -1,0 +1,29 @@
+li:hover{
+    background-color: #D9E2EC;
+}
+
+ul {
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.pending-orders-full {
+    width: 30vw;
+    height: 60vh
+}
+
+.pending-orders-full-body {
+    display:flex;
+    background-color: white; 
+    padding:10px;
+}
+
+.pending-orders-header-label {
+    font-weight: bold;
+}
+
+.pending-orders-full-list {
+    list-style-type:none; 
+    padding-right: 20px; 
+    overflow-y: auto;
+}

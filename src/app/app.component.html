@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+    <app-home-page-header [accountInfo]="accountInfo" (pageSelected)=changePageClick($event)></app-home-page-header>
+
+    <mat-sidenav-container class="main-content">
+
+      <mat-sidenav class="main-content-sidenav" #sidenav mode="side" [(opened)]="opened">
+        <div class="px-3 py-2 main-content-sidenav-inner">
+          
+          <div class="sidenav-button-vertical-padding">
+            <div [ngClass]="{'selected-sidenav-button': currentPage=='home'}">
+              <button aria-label="Side Menu Home Button" (click)="changePageClick('home')" [ngClass]="(currentPage=='home')?'selected-sidenav-padding':'sidenav-padding'" mat-icon-button aria-label="Home button">
+                <mat-icon>home</mat-icon>
+                Home
+              </button>
+            </div>
+          </div>
+
+          <div class="sidenav-button-vertical-padding">
+            <div [ngClass]="{'selected-sidenav-button': currentPage=='orders'}">
+              <button aria-label="Side Menu Orders Button" (click)="changePageClick('orders');" [ngClass]="(currentPage=='orders')?'selected-sidenav-padding':'sidenav-padding'" mat-icon-button aria-label="Orders button">
+                <mat-icon>shopping_basket</mat-icon>
+                Orders
+              </button>
+            </div>
+          </div>
+
+          <div class="sidenav-button-vertical-padding">
+            <div [ngClass]="{'selected-sidenav-button': currentPage=='financial'}">
+              <button aria-label="Side Menu Financial Button" (click)="changePageClick('financial')" [ngClass]="(currentPage=='financial')?'selected-sidenav-padding':'sidenav-padding'" mat-icon-button aria-label="Financial button">
+                <mat-icon>credit_card</mat-icon>
+                Financial
+              </button>
+            </div>
+          </div>
+
+          <div class="sidenav-button-vertical-padding">
+            <div [ngClass]="{'selected-sidenav-button': currentPage=='reports'}">
+              <button aria-label="Side Menu Reports Button" (click)="changePageClick('reports')" [ngClass]="(currentPage=='reports')?'selected-sidenav-padding':'sidenav-padding'" mat-icon-button aria-label="Reports button">
+                <mat-icon>list_alt</mat-icon>
+                Reports
+              </button>
+            </div>
+          </div>
+
+
+          <div class="sidenav-button-vertical-padding">
+            <div [ngClass]="{'selected-sidenav-button': currentPage=='settings'}">
+              <button aria-label="Side Menu settings Button" (click)="changePageClick('settings')" [ngClass]="(currentPage=='settings')?'selected-sidenav-padding sidenav-bottom':'sidenav-padding sidenav-bottom'" mat-icon-button aria-label="Settings button">
+                <mat-icon>settings</mat-icon>
+                Settings
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </mat-sidenav>
+
+      <mat-sidenav-content class="main-content-non-sidenav">
+
+        <div *ngIf="currentPage=='home'; else notHomePage">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+                <app-overview-card [loading]="homePageOverviewLoading" [overview]="homePageOverview"></app-overview-card>
+            </div>
+            <div class="col-12 col-lg-6">
+                <app-map-card [loading]="mapLoading"></app-map-card>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-lg-3">
+                <div class="row">
+                    <app-check-box-filter [loading]="checkBoxItemsLoading" [checkBoxes]="checkBoxItems"></app-check-box-filter>
+                </div>
+                <div class="row">
+                    <app-pending-orders-card [loading]="pendingOrderItemsLoading" [pendingOrderItems]="pendingOrderItems"></app-pending-orders-card>
+                </div>
+              </div>
+              <div class="col-12 col-lg-9">
+                <app-order-history-table [loading]="orderHistoryTableItemsLoading" [tableData]="orderHistoryTableItems"></app-order-history-table>
+            </div>
+          </div>
+        </div>
+        <ng-template #notHomePage>
+          <div class="row justify-content-center">
+            You are now on the {{currentPage}} page
+          </div>
+        </ng-template>
+
+        <button aria-label="Toggle Side Menu" [ngClass]="!opened ? 'rotated-double-chevron main-bottom sidenav-toggle-outer' : 'double-chevron main-bottom sidenav-toggle-outer'" mat-button (click)="sidenav.toggle()">
+          <span class="sidenav-icon">&#171;</span>
+        </button>
+
+      </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  </body>
+</html>

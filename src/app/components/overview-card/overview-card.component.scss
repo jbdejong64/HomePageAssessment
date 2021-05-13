@@ -1,0 +1,27 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overview {
+    height: 150px;
+}
+
+.overview-body {
+    height:150px;
+    background-image: linear-gradient(to right, #014D40, #147D64);
+}
+
+.top-text {
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bottom-text {
+    color:white;
+    font-weight: bold;
+    font-size: 42px;
+}

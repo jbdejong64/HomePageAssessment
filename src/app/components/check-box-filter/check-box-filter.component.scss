@@ -1,0 +1,35 @@
+.checkbox-filter {
+    height: 250px;
+}
+
+.checkbox-filter-body {
+    padding: 10px;
+}
+
+.checkbox-filter-header-label {
+    font-weight: bold;
+}
+
+.checkbox-filter-search-label {
+    font-weight: lighter;
+}
+
+.checkbox-filter-search-input {
+    width: 100%;
+}
+
+.checkbox-item-label {
+    padding-left: 10px;
+}
+
+.checkbox-list {
+    overflow-y: auto;
+    height: 100px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
