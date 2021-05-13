@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   pendingOrderItemsLoading = true;
   orderHistoryTableItemsLoading = true;
 
-  constructor(private toastr: ToastrService){}
+  constructor(public toastr: ToastrService){}
 
   ngOnInit(): void {
     this.toastr.warning("Please continue to finish the process", "Notification!", {
@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
     setTimeout(()=> {this.homePageOverviewLoading=false;}, 1000);
 
     this.checkBoxItems = JsonTestData.checkboxCardItems;
-    setTimeout(()=> {this.checkBoxItemsLoading=false;}, 3000);
+    setTimeout(()=> {this.checkBoxItemsLoading=false;}, 2000);
 
     this.pendingOrderItems = JsonTestData.pendingOrderItems;
-    setTimeout(()=> {this.pendingOrderItemsLoading=false;}, 5000);
+    setTimeout(()=> {this.pendingOrderItemsLoading=false;}, 3000);
 
     for(var i=0; i < JsonTestData.orderHistoryTableItem.length; i++){
       var tableItem: OrderHistoryTableItem = {} as OrderHistoryTableItem;
@@ -59,7 +59,7 @@ export class AppComponent implements OnInit {
 
       this.orderHistoryTableItems.push(tableItem);
     }
-    setTimeout(()=> {this.orderHistoryTableItemsLoading=false;}, 7000);
+    setTimeout(()=> {this.orderHistoryTableItemsLoading=false;}, 4000);
   }
 
   public changePageClick(btnName: string) {

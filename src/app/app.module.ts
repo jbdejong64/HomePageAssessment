@@ -26,7 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ToastrModule } from 'ngx-toastr';
 
-import { FilterPipe } from './services/filter';
+import { FilterPipe } from './pipes/filter';
 import { PendingOrdersCardFullComponent } from './components/pending-orders-card-full/pending-orders-card-full.component';
 import { OrderHistoryTableFullComponent } from './components/order-history-table-full/order-history-table-full.component';
 
@@ -63,7 +63,6 @@ import { OrderHistoryTableFullComponent } from './components/order-history-table
     MatProgressSpinnerModule,
     ToastrModule.forRoot({})
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

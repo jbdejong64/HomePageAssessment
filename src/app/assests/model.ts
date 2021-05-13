@@ -10,7 +10,7 @@ export interface PendingOrderCardItem {
     name: string;
     value: number;
     ageOfOrder: string;
-  }
+}
 
 export interface HomePageOverview {
     projects: number;

@@ -9,7 +9,7 @@
             <input [(ngModel)]="searchText" class="checkbox-filter-search-input" type="text" id="checkBoxSearch" name="checkBoxSearch" value="" aria-label="Search input"><br>
 
             <div class="my-2 checkbox-list">
-                <div *ngFor="let box of checkBoxes | filter : searchText">
+                <div *ngFor="let box of checkBoxes | filterCheckboxes : searchText">
                     <input (change)="updateSelectedValues()" [(ngModel)]="box.selected" type="checkbox" [checked]="box.selected" [attr.aria-label]="'Checkbox ' + box.name + ' selected ' + box.selected">
                     <span class="checkbox-item-label">{{box.name}}</span>
                 </div>

@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PendingOrdersCardFullComponent } from './pending-orders-card-full.component';
@@ -8,7 +9,8 @@ describe('PendingOrdersCardFullComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PendingOrdersCardFullComponent ]
+      declarations: [ PendingOrdersCardFullComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   });

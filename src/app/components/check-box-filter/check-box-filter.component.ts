@@ -16,14 +16,6 @@ export class CheckBoxFilterComponent implements OnInit {
   selectedValueName: string = "";
   selectedValues: CheckboxCardItem[] = [];
 
-  /*checkBoxes: CheckboxCardItem[] = [
-    { name: "Apple", selected: true},
-    { name: "Pear", selected: true},
-    { name: "Dog", selected: false},
-    { name: "Bird", selected: false},
-    { name: "Cat", selected: false}
-  ]*/
-
   constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
@@ -33,10 +25,6 @@ export class CheckBoxFilterComponent implements OnInit {
 
   updateSelectedValues(){
     this.selectedValues = this.checkBoxes.filter(s => s.selected);
-
-    this.selectedValues.forEach(s => {
-      console.log(s.name);
-    })
   }
 
   applyCheckedBoxes() {

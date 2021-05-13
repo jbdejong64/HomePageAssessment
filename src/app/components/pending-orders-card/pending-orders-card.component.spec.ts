@@ -1,4 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { PendingOrdersCardComponent } from './pending-orders-card.component';
 
@@ -8,7 +10,9 @@ describe('PendingOrdersCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PendingOrdersCardComponent ]
+      declarations: [ PendingOrdersCardComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [MatDialogModule]
     })
     .compileComponents();
   });
