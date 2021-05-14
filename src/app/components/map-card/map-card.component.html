@@ -3,6 +3,6 @@
         <mat-spinner aria-label="Loading animation"></mat-spinner>
     </div>
     <ng-template #loaded>
-        <google-map aria-label="Google Maps" height="150px" width="100%"></google-map>
+        <google-map [center]="startingCenter" aria-label="Google Maps" height="150px" width="100%"></google-map>
     </ng-template>
 </div>

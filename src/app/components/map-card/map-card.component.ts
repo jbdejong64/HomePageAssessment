@@ -9,6 +9,8 @@ export class MapCardComponent implements OnInit {
 
   @Input() loading: boolean = true;
 
+  startingCenter: google.maps.LatLngLiteral = {lat:20.8846913 ,lng:-156.4647848};
+
   constructor() { }
 
   ngOnInit(): void {
