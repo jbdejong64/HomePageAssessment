@@ -68,17 +68,17 @@
 
       <mat-sidenav-content class="main-content-non-sidenav">
 
-        <div *ngIf="currentPage=='home'; else notHomePage">
+        <div *ngIf="currentPage=='home'; else notHomePage" class="main-content-non-sidenav-components">
           <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-xl-6">
                 <app-overview-card [loading]="homePageOverviewLoading" [overview]="homePageOverview"></app-overview-card>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-xl-6">
                 <app-map-card [loading]="mapLoading"></app-map-card>
             </div>
           </div>
           <div class="row">
-              <div class="col-12 col-lg-3">
+              <div class="col-12 col-xl-3">
                 <div class="row">
                     <app-check-box-filter [loading]="checkBoxItemsLoading" [checkBoxes]="checkBoxItems"></app-check-box-filter>
                 </div>
@@ -86,7 +86,7 @@
                     <app-pending-orders-card [loading]="pendingOrderItemsLoading" [pendingOrderItems]="pendingOrderItems"></app-pending-orders-card>
                 </div>
               </div>
-              <div class="col-12 col-lg-9">
+              <div class="col-12 col-xl-9">
                 <app-order-history-table [loading]="orderHistoryTableItemsLoading" [tableData]="orderHistoryTableItems"></app-order-history-table>
             </div>
           </div>
