@@ -48,7 +48,7 @@ All have loading state inputs set up. At the moment, given the data is being col
  2. The check-box-filter.component can filter checkboxes using the "Search" input based on concurrent chars (ie: "at" = {"Bat", "Cats", "Rat"}, "ats" = {"Cats"} ).
  3. The check-box-filter.component can display all selected checkboxes via Toaster Alert once "Apply" is clicked.
  4. Clicking on the side and header dropdown buttons will cause the main content to display a different page.
- 5. Clicking on the double chevron will toggle the sidenav menu along with animating the icon to rotate 180 degrees
+ 5. Clicking on the double chevron will toggle the sidenav menu along with animating the icon to rotate 180 degrees.
 
 ### Json File
 
