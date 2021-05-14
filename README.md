@@ -36,8 +36,8 @@ ng serve
   * app.component
   * check-box-filter.component
 * - [x] Table:
-  * app.component
-  * check-box-filter.component
+  * order-history-table.component
+  * order-history-table-full.component
 * - [x] List:
   * pending-orders-card.component
   * pending-orders-card.component
@@ -46,15 +46,30 @@ ng serve
 * - [x] Left Side Menu:
   * app.component
 * - [x] Drop Shadows:
-  * overview-card.component
   * check-box-filter.component
   * map-card.component
+  * order-history-table.component
+  * order-history-table-full.component
+  * overview-card.component
+  * pending-orders-card.component
+  * pending-orders-card-full.component
 * - [x] Gradient:
   * overview-card.component
 * - [x] Inputs:
-  * home-page-header.component
   * check-box-filter.component
+  * home-page-header.component
   * map-card.component
+  * order-history-table.component
+  * order-history-table-full.component
+  * overview-card.component
+  * pending-orders-card.component
+  * pending-orders-card-full.component
+  * pending-orders-items.component
 * - [x] Buttons:
-  * home-page-header.component
-  * check-box-filter.component
+  * app.component
+  * check-box-filter.componen
+  * home-page-header.componentt
+  * order-history-table.component
+  * order-history-table-full.component
+  * pending-orders-card.component
+  * pending-orders-card-full.component
