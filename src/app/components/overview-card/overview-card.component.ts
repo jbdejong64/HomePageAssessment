@@ -1,3 +1,7 @@
+// Card that displays an overview of total projects, revenue, and percent variance
+
+// Uses loading boolean input for cases where input data returns asynchronous 
+
 import { Component, Input, OnInit } from '@angular/core';
 import { HomePageOverview } from '../../assests/model';
 

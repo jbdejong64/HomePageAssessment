@@ -1,5 +1,6 @@
 <mat-toolbar class="home-page-header">
 
+    <!--Homepage Name and icon with hyperlink-->
     <a href="https://en.wikipedia.org/wiki/Acme_Corporation" target="_blank" aria-label="ACME Co. Header">
         <mat-icon>pets</mat-icon>
         <span class="home-page-header-icon-label">ACME Co.</span>
@@ -8,6 +9,7 @@
     <!--Space out the header-->
     <span style="flex: 1;"></span>
 
+    <!--Alert/Notification button-->
     <button mat-icon-button aria-label="Notification button" [matMenuTriggerFor]="notification">
         <mat-icon>notifications</mat-icon>
     </button>
@@ -18,10 +20,12 @@
         <button mat-menu-item aria-label="Knock... sub button" (click)="clickAlert('Knock...')"> <mat-icon>notifications</mat-icon> Knock... </button>
     </mat-menu>
 
+    <!--Account button-->
     <button mat-icon-button aria-label="Account button" [matMenuTriggerFor]="account">
         <mat-icon>account_circle</mat-icon>
     </button>
     <mat-menu #account="matMenu" class="mat-elevation-z4">
+        <!--Account info-->
         <div class="px-3 py-1 account-menu-header">
             <div class="account-name" [attr.aria-label]="'Account Name: ' + accountInfo.name">
                 {{accountInfo.name}}
@@ -30,6 +34,7 @@
                 {{accountInfo.email}}
             </div>
         </div>
+        <!--Account buttons and logout-->
         <button mat-menu-item aria-label="Account Settings Page Button" (click)="onAccountButtonClick('user settings')"> <mat-icon>settings</mat-icon> Settings </button>
         <button mat-menu-item aria-label="Profile Page Button" (click)="onAccountButtonClick('user profile')"> <mat-icon>account_circle</mat-icon> Profile </button>
         <div class="logout-btn-align">

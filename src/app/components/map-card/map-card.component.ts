@@ -1,3 +1,7 @@
+// Component card with embeded google maps with GoogleMapsModule from '@angular/google-maps'
+
+// Uses loading boolean input for cases where input data returns asynchronous 
+
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({

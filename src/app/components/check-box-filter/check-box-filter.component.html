@@ -1,13 +1,16 @@
 <div class="card mb-4 mat-elevation-z4 checkbox-filter">
+    <!--Loading-->
     <div class="loading" *ngIf="loading; else loaded">
         <mat-spinner aria-label="Loading animation"></mat-spinner>
     </div>
     <ng-template #loaded>
         <div class="checkbox-filter-body">
+            <!--Top filter input-->
             <div class="checkbox-filter-header-label">Filter</div>
             <label class="checkbox-filter-search-label" for="checkBoxSearch" aria-label="Search">Search</label><br>
             <input [(ngModel)]="searchText" class="checkbox-filter-search-input" type="text" id="checkBoxSearch" name="checkBoxSearch" value="" aria-label="Search input"><br>
 
+            <!--Checkbox body scroll list-->
             <div class="my-2 checkbox-list">
                 <div *ngFor="let box of checkBoxes | filterCheckboxes : searchText">
                     <input (change)="updateSelectedValues()" [(ngModel)]="box.selected" type="checkbox" [checked]="box.selected" [attr.aria-label]="'Checkbox ' + box.name + ' selected ' + box.selected">
@@ -15,6 +18,7 @@
                 </div>
             </div>
 
+            <!--Apply button to display/set selected checkboxes-->
             <div style="display:flex;">
                 <span style="flex: 1;"></span>
                 <button (click)="applyCheckedBoxes()" class="btn-sm btn-success rounded-pill" aria-label="Button Apply">Apply</button>

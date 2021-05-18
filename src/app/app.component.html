@@ -10,11 +10,16 @@
   </head>
   <body>
     
+    <!--Header-->
     <app-home-page-header [accountInfo]="accountInfo" (pageSelected)=changePageClick($event)></app-home-page-header>
 
+    <!--Body-->
     <mat-sidenav-container class="main-content">
 
+      <!--SideNavMenu-->
       <mat-sidenav class="main-content-sidenav" #sidenav mode="side" [(opened)]="opened">
+
+        <!--Display menu buttons while highlighting selected button-->
         <div class="px-3 py-2 main-content-sidenav-inner">
           
           <div class="sidenav-button-vertical-padding">
@@ -66,18 +71,23 @@
         </div>
       </mat-sidenav>
 
+      <!--SideNav Main Content-->
       <mat-sidenav-content class="main-content-non-sidenav">
 
+        <!--Display content depending on selected button (currentPage) from SideNavMenu-->
         <div *ngIf="currentPage=='home'; else notHomePage" class="main-content-non-sidenav-components">
           <div class="row">
+            <!--Dispaly app-overview-card half width at full page and take up a full row if page is minimized-->
             <div class="col-12 col-xl-6">
                 <app-overview-card [loading]="homePageOverviewLoading" [overview]="homePageOverview"></app-overview-card>
             </div>
+            <!--Dispaly app-map-card half width at full page and take up a full row if page is minimized-->
             <div class="col-12 col-xl-6">
                 <app-map-card [loading]="mapLoading"></app-map-card>
             </div>
           </div>
           <div class="row">
+            <!--Dispaly app-check-box-filter and app-pending-orders-card at a fourth of the width at full page and take up a full row if page is minimized-->
               <div class="col-12 col-xl-3">
                 <div class="row">
                     <app-check-box-filter [loading]="checkBoxItemsLoading" [checkBoxes]="checkBoxItems"></app-check-box-filter>
@@ -86,6 +96,7 @@
                     <app-pending-orders-card [loading]="pendingOrderItemsLoading" [pendingOrderItems]="pendingOrderItems"></app-pending-orders-card>
                 </div>
               </div>
+              <!--Dispaly papp-order-history-table at a three-fourths of the width at full page and take up a full row if page is minimized-->
               <div class="col-12 col-xl-9">
                 <app-order-history-table [loading]="orderHistoryTableItemsLoading" [tableData]="orderHistoryTableItems"></app-order-history-table>
             </div>
@@ -97,6 +108,7 @@
           </div>
         </ng-template>
 
+        <!--Button that displays regardless of 'currentPage' that toggles the SideNavMenu open and closed, also rotates 1809 degrees when clicked-->
         <button aria-label="Toggle Side Menu" [ngClass]="!opened ? 'rotated-double-chevron main-bottom sidenav-toggle-outer' : 'double-chevron main-bottom sidenav-toggle-outer'" mat-button (click)="sidenav.toggle()">
           <span class="sidenav-icon">&#171;</span>
         </button>

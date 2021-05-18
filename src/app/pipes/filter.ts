@@ -1,3 +1,5 @@
+// Pipe that filters a list of objects with object.name variable by string
+
 import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'filterCheckboxes'

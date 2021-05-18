@@ -1,3 +1,8 @@
+// Component card that displays a list of at most 3 PendingOrderCardItem(name:string, value:number, ageOfOrder:string) along with a header that contains
+// a button to go to the full version.
+
+// Uses loading boolean input for cases where input data returns asynchronous 
+
 import { Component, OnInit, Input } from '@angular/core';
 import { PendingOrderCardItem } from 'src/app/assests/model';
 import { MatDialog } from '@angular/material/dialog';

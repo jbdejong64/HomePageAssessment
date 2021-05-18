@@ -1,13 +1,16 @@
 <div class="card mb-4 mat-elevation-z4 pending-orders">
+    <!--Loading-->
     <div class="loading" *ngIf="loading; else loaded">
         <mat-spinner aria-label="Loading animation"></mat-spinner>
     </div>
     <ng-template #loaded>
+        <!--Header-->
         <div class="pending-orders-body">
-        <span class="pending-orders-header-label">Pending Orders ( {{pendingOrderItems.length}} )</span>
-        <span style="flex: 1;"></span>
-        <button aria-label="View All Button" *ngIf="pendingOrderItems.length > 3" (click)="openPendingOrdersExpandedDialog()" class="view-all-btn">View All</button>
+            <span class="pending-orders-header-label">Pending Orders ( {{pendingOrderItems.length}} )</span>
+            <span style="flex: 1;"></span>
+            <button aria-label="View All Button" *ngIf="pendingOrderItems.length > 3" (click)="openPendingOrdersExpandedDialog()" class="view-all-btn">View All</button>
         </div>
+        <!--List body-->
         <ul class="pending-orders-list">
             <li *ngFor="let item of pendingOrderItems">
                 <app-pending-orders-items [pendingOrder]="item"></app-pending-orders-items>

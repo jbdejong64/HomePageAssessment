@@ -1,3 +1,8 @@
+// Table component with custom header, does not have paginator or scrolling and can only displays 11 OrderHistoryTableItem rows. 
+// Contains button 'View all' to open dialog of full version of component.
+
+// Uses loading boolean input for cases where input data returns asynchronous 
+
 import { Component, Input, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { OrderHistoryTableItem } from 'src/app/assests/model';
@@ -14,6 +19,7 @@ export class OrderHistoryTableComponent implements OnInit {
   @Input() loading: boolean = true;
   @Input() tableData!: OrderHistoryTableItem[]; 
 
+  //Column headers
   displayedColumns: string[] = ['orderNumber', 'created', 'totalWorkAmount', 'product', 'status'];
   dataSource = new MatTableDataSource(this.tableData);
 

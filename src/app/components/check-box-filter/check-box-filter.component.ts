@@ -1,3 +1,8 @@
+// Creates a checkbox card that displays an array of CheckboxCardItem( name: string, selected: boolean ). The array of CheckboxCardItem can be filtered with a custom pipe 'filter'
+// from a text input. The apply button will display/set selected checkboxes
+
+// Uses loading boolean input for cases where input data returns asynchronous 
+
 import { Component, Input, OnInit } from '@angular/core';
 import { CheckboxCardItem } from '../../assests/model'
 import { ToastrService } from 'ngx-toastr';
@@ -27,6 +32,7 @@ export class CheckBoxFilterComponent implements OnInit {
     this.selectedValues = this.checkBoxes.filter(s => s.selected);
   }
 
+  // Show selected checkboxes from input 'checkBoxes' on a toastr popup
   applyCheckedBoxes() {
     this.selectedValueName = "";
 

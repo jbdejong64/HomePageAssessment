@@ -1,3 +1,5 @@
+// Header bar with page name and account/setting menu buttons
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AccountInfo } from 'src/app/assests/model';
 

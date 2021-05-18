@@ -1,7 +1,9 @@
 <div class="card pending-orders-full">
+    <!--Header-->
     <div class="pending-orders-full-body ">
       <span class="pending-orders-header-label">Pending Orders</span>
     </div>
+    <!--List body-->
     <ul class="pending-orders-full-list">
         <li *ngFor="let item of pendingOrderItems">
             <app-pending-orders-items [pendingOrder]="item"></app-pending-orders-items>

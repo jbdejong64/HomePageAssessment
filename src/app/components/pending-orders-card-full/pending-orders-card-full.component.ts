@@ -1,3 +1,5 @@
+// Component card that displays a scrolling list of PendingOrderCardItem(name:string, value:number, ageOfOrder:string)
+
 import { Component, Input, OnInit } from '@angular/core';
 import { PendingOrderCardItem } from 'src/app/assests/model';
 
